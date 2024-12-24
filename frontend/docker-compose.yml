@@ -1,0 +1,17 @@
+services:
+  frontend:
+    build:                 # Dockerfile을 참조하여 이미지 빌드
+      context: .           # 현재 디렉터리에서 빌드
+    container_name: frontend-container
+    working_dir: /app      # 컨테이너 내부 작업 디렉터리
+    volumes:               # 바인드 마운트 설정
+      - ./src:/app/src:cached    # 로컬 src 디렉터리를 컨테이너 /app/src로 마운트
+      - ./public:/app/public:cached # 로컬 public 디렉터리를 컨테이너 /app/public로 마운트
+      - ./package.json:/app/package.json # package.json을 컨테이너로 마운트
+      - ./package-lock.json:/app/package-lock.json
+      - /app/node_modules  # 컨테이너 내부 node_modules 유지
+    ports:
+      - "3000:3000"        # 로컬 포트 3000 -> 컨테이너 포트 3000
+    stdin_open: true
+    tty: true
+    command: ["npm", "start"] # 컨테이너 실행 시 npm start 실행 
