@@ -5,24 +5,6 @@
 
 ---
 
-## 📂 프로젝트 구조
-
-frontend/
-├── public/                     # 정적 파일 (HTML, 이미지 등)
-├── src/                        # 애플리케이션 소스 코드
-│   ├── components/             # 재사용 가능한 UI 컴포넌트
-│   ├── pages/                  # 주요 페이지 컴포넌트
-│   ├── App.js                  # 메인 React 컴포넌트
-│   ├── index.js                # React 진입점
-│   └── App.css                 # 전역 스타일 파일
-├── .gitignore                  # Git 관리 제외 파일 목록
-├── docker-compose.yml          # Docker Compose 설정 파일
-├── Dockerfile                  # Docker 빌드 설정 파일
-├── package.json                # 프로젝트 설정 및 의존성 목록
-└── README.md                   # 프로젝트 설명 파일
-
----
-
 ## 🚀 프로젝트 기능
 
 ### 1. **주요 기능**
